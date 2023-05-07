@@ -9,8 +9,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    let mainLabel = UILabel()
-    let subLabel = UILabel()
+    let titleLabel = UILabel()
+    let subtitleLabel = UILabel()
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
     let errorMessageLabel = UILabel()
@@ -35,6 +35,20 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     
     private func style() {
+        
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.textAlignment = .center
+        titleLabel.font = UIFont.preferredFont(forTextStyle: .largeTitle)
+        titleLabel.adjustsFontForContentSizeCategory = true
+        titleLabel.text = "Bankey"
+        
+        subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        subtitleLabel.textAlignment = .center
+        subtitleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+        subtitleLabel.adjustsFontForContentSizeCategory = true
+        subtitleLabel.numberOfLines = 0
+        subtitleLabel.text = "Your premium source for all things banking!"
+        
         loginView.translatesAutoresizingMaskIntoConstraints = false
         
         signInButton.translatesAutoresizingMaskIntoConstraints = false
@@ -49,29 +63,22 @@ extension LoginViewController {
         errorMessageLabel.numberOfLines = 0
         errorMessageLabel.isHidden = true
         
-        mainLabel.translatesAutoresizingMaskIntoConstraints = false
-        mainLabel.text = "Bankey"
-        
-        subLabel.translatesAutoresizingMaskIntoConstraints = false
-        subLabel.numberOfLines = 2
-        subLabel.text = "You premium source for all things banking!"
-        
     }
     
     private func layout() {
-        view.addSubview(mainLabel)
-        view.addSubview(subLabel)
+        view.addSubview(titleLabel)
+        view.addSubview(subtitleLabel)
         view.addSubview(loginView)
         view.addSubview(signInButton)
         view.addSubview(errorMessageLabel)
         
         NSLayoutConstraint.activate([
             
-            mainLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            subLabel.topAnchor.constraint(equalToSystemSpacingBelow: mainLabel.bottomAnchor, multiplier: 3),
+            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            subtitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: titleLabel.bottomAnchor, multiplier: 3),
             
-            subLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            loginView.topAnchor.constraint(equalToSystemSpacingBelow: subLabel.bottomAnchor, multiplier: 2),
+            subtitleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loginView.topAnchor.constraint(equalToSystemSpacingBelow: subtitleLabel.bottomAnchor, multiplier: 2),
             
             // LoginView
             loginView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
