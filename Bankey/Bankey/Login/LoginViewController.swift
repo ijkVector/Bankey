@@ -7,6 +7,14 @@
 
 import UIKit
 
+protocol LogoutDelegate: AnyObject {
+    func didLogout()
+}
+
+protocol LoginViewControllerDelegate: AnyObject {
+    func didLogin()
+}
+
 class LoginViewController: UIViewController {
     
     let titleLabel = UILabel()
@@ -14,6 +22,8 @@ class LoginViewController: UIViewController {
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
     let errorMessageLabel = UILabel()
+    
+    weak var delegate: LoginViewControllerDelegate?
     
     var username: String? {
         return loginView.userNameTextField.text
@@ -28,7 +38,11 @@ class LoginViewController: UIViewController {
         style()
         layout()
     }
-
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        signInButton.configuration?.showsActivityIndicator = false 
+    }
 
 }
 
@@ -74,9 +88,11 @@ extension LoginViewController {
         
         NSLayoutConstraint.activate([
             
+            // Title
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             subtitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: titleLabel.bottomAnchor, multiplier: 3),
             
+            // SubTitle
             subtitleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             loginView.topAnchor.constraint(equalToSystemSpacingBelow: subtitleLabel.bottomAnchor, multiplier: 2),
             
@@ -90,7 +106,7 @@ extension LoginViewController {
             signInButton.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
             signInButton.trailingAnchor.constraint(equalTo: loginView.trailingAnchor),
             
-            // ErrorLabel
+            // Error Message
             errorMessageLabel.topAnchor.constraint(equalToSystemSpacingBelow: signInButton.bottomAnchor, multiplier: 2),
             errorMessageLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
@@ -98,6 +114,7 @@ extension LoginViewController {
     }
 }
 
+// MARK: -Actions
 extension LoginViewController {
     
     @objc func signInTapped(sender: UIButton) {
@@ -114,8 +131,9 @@ extension LoginViewController {
         if username.isEmpty || password.isEmpty {
             configureView(withMessage: "Username / Password can't be blank")
             return
-        } else if username == "Ivan" && password == "welcome" {
+        } else if username == "." && password == "." {
             signInButton.configuration?.showsActivityIndicator = true
+            delegate?.didLogin()
         } else {
             configureView(withMessage: "Incorect Username / Password")
         }
