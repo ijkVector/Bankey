@@ -9,20 +9,42 @@
 /* Begin PBXBuildFile section */
 		6B512EFF2A093CA000E065AB /* UIViewControllers+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B512EFE2A093CA000E065AB /* UIViewControllers+Utils.swift */; };
 		6B512F012A093ECD00E065AB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B512F002A093ECD00E065AB /* MainViewController.swift */; };
+		6B9778272A0B66DB00E33CB6 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9778262A0B66DB00E33CB6 /* AccountSummaryCell.swift */; };
+		6B9778292A0B97B600E33CB6 /* DecimalUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9778282A0B97B600E33CB6 /* DecimalUtils.swift */; };
+		6B97782B2A0B986200E33CB6 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B97782A2A0B986200E33CB6 /* CurrencyFormatter.swift */; };
+		6B97783A2A0BE38100E33CB6 /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9778392A0BE38100E33CB6 /* CurrencyFormatterTests.swift */; };
 		6B99C91429D189C800D8840D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B99C91329D189C800D8840D /* AppDelegate.swift */; };
 		6B99C91829D189C800D8840D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B99C91729D189C800D8840D /* LoginViewController.swift */; };
 		6B99C91D29D189C900D8840D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B99C91C29D189C900D8840D /* Assets.xcassets */; };
 		6B99C92029D189C900D8840D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B99C91E29D189C900D8840D /* LaunchScreen.storyboard */; };
 		6B99C92B29D1912500D8840D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B99C92A29D1912500D8840D /* LoginView.swift */; };
+		6BA5E0312A0A3CE600D0AC9F /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA5E0302A0A3CE600D0AC9F /* AccountSummaryViewController.swift */; };
+		6BA5E0332A0A47BE00D0AC9F /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA5E0322A0A47BE00D0AC9F /* AccountSummaryHeaderView.swift */; };
+		6BA5E0352A0A489E00D0AC9F /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BA5E0342A0A489E00D0AC9F /* AccountSummaryHeaderView.xib */; };
 		6BDA314E2A08E44D00FB7F78 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDA314D2A08E44D00FB7F78 /* DummyViewController.swift */; };
 		6BDA31512A08F0D500FB7F78 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDA31502A08F0D500FB7F78 /* LocalState.swift */; };
 		6BFA51612A07AE09002EA392 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA51602A07AE08002EA392 /* OnboardingContainerViewController.swift */; };
 		6BFA51632A07C25B002EA392 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA51622A07C25B002EA392 /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6B9778342A0BE1E000E33CB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B99C90829D189C800D8840D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B99C90F29D189C800D8840D;
+			remoteInfo = Bankey;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		6B512EFE2A093CA000E065AB /* UIViewControllers+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControllers+Utils.swift"; sourceTree = "<group>"; };
 		6B512F002A093ECD00E065AB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6B9778262A0B66DB00E33CB6 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
+		6B9778282A0B97B600E33CB6 /* DecimalUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalUtils.swift; sourceTree = "<group>"; };
+		6B97782A2A0B986200E33CB6 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		6B9778302A0BE1E000E33CB6 /* BankeyUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B9778392A0BE38100E33CB6 /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
 		6B99C91029D189C800D8840D /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B99C91329D189C800D8840D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B99C91729D189C800D8840D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +52,9 @@
 		6B99C91F29D189C900D8840D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B99C92129D189C900D8840D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B99C92A29D1912500D8840D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		6BA5E0302A0A3CE600D0AC9F /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
+		6BA5E0322A0A47BE00D0AC9F /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
+		6BA5E0342A0A489E00D0AC9F /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
 		6BDA314D2A08E44D00FB7F78 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		6BDA31502A08F0D500FB7F78 /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		6BFA51602A07AE08002EA392 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +62,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6B97782D2A0BE1E000E33CB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6B99C90D29D189C800D8840D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -47,10 +79,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B9778242A0B664D00E33CB6 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				6BA5E0322A0A47BE00D0AC9F /* AccountSummaryHeaderView.swift */,
+				6BA5E0342A0A489E00D0AC9F /* AccountSummaryHeaderView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		6B9778252A0B668900E33CB6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6B9778262A0B66DB00E33CB6 /* AccountSummaryCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6B9778312A0BE1E000E33CB6 /* BankeyUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B9778392A0BE38100E33CB6 /* CurrencyFormatterTests.swift */,
+			);
+			path = BankeyUnitTests;
+			sourceTree = "<group>";
+		};
 		6B99C90729D189C800D8840D = {
 			isa = PBXGroup;
 			children = (
 				6B99C91229D189C800D8840D /* Bankey */,
+				6B9778312A0BE1E000E33CB6 /* BankeyUnitTests */,
 				6B99C91129D189C800D8840D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				6B99C91029D189C800D8840D /* Bankey.app */,
+				6B9778302A0BE1E000E33CB6 /* BankeyUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +129,7 @@
 				6B512F002A093ECD00E065AB /* MainViewController.swift */,
 				6B99C92929D190BC00D8840D /* Login */,
 				6BFA515F2A07ADBE002EA392 /* Onboarding */,
+				6BA5E02F2A0A3C7400D0AC9F /* AccountSummary */,
 				6BDA314F2A08F0B200FB7F78 /* Utils */,
 				6B99C92729D18F7000D8840D /* Files */,
 			);
@@ -96,11 +156,23 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		6BA5E02F2A0A3C7400D0AC9F /* AccountSummary */ = {
+			isa = PBXGroup;
+			children = (
+				6BA5E0302A0A3CE600D0AC9F /* AccountSummaryViewController.swift */,
+				6B9778242A0B664D00E33CB6 /* Header */,
+				6B9778252A0B668900E33CB6 /* Cells */,
+			);
+			path = AccountSummary;
+			sourceTree = "<group>";
+		};
 		6BDA314F2A08F0B200FB7F78 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				6BDA31502A08F0D500FB7F78 /* LocalState.swift */,
 				6B512EFE2A093CA000E065AB /* UIViewControllers+Utils.swift */,
+				6B9778282A0B97B600E33CB6 /* DecimalUtils.swift */,
+				6B97782A2A0B986200E33CB6 /* CurrencyFormatter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -117,6 +189,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6B97782F2A0BE1E000E33CB6 /* BankeyUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B9778362A0BE1E000E33CB6 /* Build configuration list for PBXNativeTarget "BankeyUnitTests" */;
+			buildPhases = (
+				6B97782C2A0BE1E000E33CB6 /* Sources */,
+				6B97782D2A0BE1E000E33CB6 /* Frameworks */,
+				6B97782E2A0BE1E000E33CB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B9778352A0BE1E000E33CB6 /* PBXTargetDependency */,
+			);
+			name = BankeyUnitTests;
+			productName = BankeyUnitTests;
+			productReference = 6B9778302A0BE1E000E33CB6 /* BankeyUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		6B99C90F29D189C800D8840D /* Bankey */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B99C92429D189C900D8840D /* Build configuration list for PBXNativeTarget "Bankey" */;
@@ -144,6 +234,11 @@
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
+					6B97782F2A0BE1E000E33CB6 = {
+						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
+						TestTargetID = 6B99C90F29D189C800D8840D;
+					};
 					6B99C90F29D189C800D8840D = {
 						CreatedOnToolsVersion = 14.1;
 					};
@@ -163,15 +258,24 @@
 			projectRoot = "";
 			targets = (
 				6B99C90F29D189C800D8840D /* Bankey */,
+				6B97782F2A0BE1E000E33CB6 /* BankeyUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6B97782E2A0BE1E000E33CB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6B99C90E29D189C800D8840D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BA5E0352A0A489E00D0AC9F /* AccountSummaryHeaderView.xib in Resources */,
 				6B99C92029D189C900D8840D /* LaunchScreen.storyboard in Resources */,
 				6B99C91D29D189C900D8840D /* Assets.xcassets in Resources */,
 			);
@@ -180,6 +284,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6B97782C2A0BE1E000E33CB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B97783A2A0BE38100E33CB6 /* CurrencyFormatterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6B99C90C29D189C800D8840D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -187,16 +299,29 @@
 				6B99C92B29D1912500D8840D /* LoginView.swift in Sources */,
 				6BDA31512A08F0D500FB7F78 /* LocalState.swift in Sources */,
 				6BDA314E2A08E44D00FB7F78 /* DummyViewController.swift in Sources */,
+				6BA5E0332A0A47BE00D0AC9F /* AccountSummaryHeaderView.swift in Sources */,
 				6B99C91829D189C800D8840D /* LoginViewController.swift in Sources */,
+				6B97782B2A0B986200E33CB6 /* CurrencyFormatter.swift in Sources */,
+				6B9778292A0B97B600E33CB6 /* DecimalUtils.swift in Sources */,
 				6B512EFF2A093CA000E065AB /* UIViewControllers+Utils.swift in Sources */,
+				6B9778272A0B66DB00E33CB6 /* AccountSummaryCell.swift in Sources */,
 				6BFA51632A07C25B002EA392 /* OnboardingViewController.swift in Sources */,
 				6B512F012A093ECD00E065AB /* MainViewController.swift in Sources */,
+				6BA5E0312A0A3CE600D0AC9F /* AccountSummaryViewController.swift in Sources */,
 				6B99C91429D189C800D8840D /* AppDelegate.swift in Sources */,
 				6BFA51612A07AE09002EA392 /* OnboardingContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B9778352A0BE1E000E33CB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B99C90F29D189C800D8840D /* Bankey */;
+			targetProxy = 6B9778342A0BE1E000E33CB6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6B99C91E29D189C900D8840D /* LaunchScreen.storyboard */ = {
@@ -210,6 +335,55 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6B9778372A0BE1E000E33CB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8682J7XR9D;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.ivandrobotov.BankeyUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bankey.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bankey";
+			};
+			name = Debug;
+		};
+		6B9778382A0BE1E000E33CB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8682J7XR9D;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.ivandrobotov.BankeyUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bankey.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bankey";
+			};
+			name = Release;
+		};
 		6B99C92229D189C900D8840D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -381,6 +555,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6B9778362A0BE1E000E33CB6 /* Build configuration list for PBXNativeTarget "BankeyUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B9778372A0BE1E000E33CB6 /* Debug */,
+				6B9778382A0BE1E000E33CB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6B99C90B29D189C800D8840D /* Build configuration list for PBXProject "Bankey" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
