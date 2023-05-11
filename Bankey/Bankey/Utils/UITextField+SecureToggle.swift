@@ -18,7 +18,7 @@ extension UITextField {
         rightView = passwordToggleButton
         rightViewMode = .always
     }
-    
+
     @objc func togglePasswordView(_ sender: Any) {
         isSecureTextEntry.toggle()
         passwordToggleButton.isSelected.toggle()
