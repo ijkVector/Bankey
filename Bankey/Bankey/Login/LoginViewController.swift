@@ -47,7 +47,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        signInButton.configuration?.showsActivityIndicator = false 
+        signInButton.configuration?.showsActivityIndicator = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
