@@ -34,7 +34,7 @@ class PasswordCriteriaView: UIView {
         imageView.image = circleImage
     }
     
-    init(withText text: String) {
+    init(withCriteria text: String) {
         self.labelText = text
         
         super.init(frame: .zero)
