@@ -21,7 +21,7 @@ class PasswordStatusView: UIView {
     let specialCharacterCriteriaView = PasswordCriteriaView(withCriteria: "special character (e.g. !@#$^)")
     
     // Used to determine if we reset criteria back to empty state (⚪️)
-    private var shouldResetCriteria: Bool = true
+    var shouldResetCriteria: Bool = true
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -116,7 +116,40 @@ extension PasswordStatusView {
             lowercaseMet ? lowercaseCriteriaView.isCrereiaMet = true : lowercaseCriteriaView.reset()
             digitMet ? digitCriteriaView.isCrereiaMet = true : digitCriteriaView.reset()
             specialCaracterMet ? specialCharacterCriteriaView.isCrereiaMet = true : specialCharacterCriteriaView.reset()
+        } else {
+            // Focus lost (❌ or ✅)
+            lengthCriteriaView.isCrereiaMet = lengthAndNoSpaceMet
+            uppercaseCriteriaView.isCrereiaMet = uppercaseMet
+            lowercaseCriteriaView.isCrereiaMet = lowercaseMet
+            digitCriteriaView.isCrereiaMet = digitMet
+            specialCharacterCriteriaView.isCrereiaMet = specialCaracterMet
         }
+    }
+    
+    func validate(_ text: String) -> Bool {
+        let lengthAndNoSpaceMet = PasswordCriteria.lenghtAndNoSpaceMet(text)
+        let uppercaseMet = PasswordCriteria.uppecaseMet(text)
+        let lowercaseMet = PasswordCriteria.lowercaseMet(text)
+        let digitMet = PasswordCriteria.digitMet(text)
+        let specialCaracterMet = PasswordCriteria.specialCharacterMet(text)
+        
+        let metCriteriaCounter = uppercaseMet.intValue + lowercaseMet.intValue + digitMet.intValue + specialCaracterMet.intValue
+        
+        return metCriteriaCounter >= 3 && lengthAndNoSpaceMet
+    }
+    
+    func reset() {
+        lengthCriteriaView.reset()
+        uppercaseCriteriaView.reset()
+        lowercaseCriteriaView.reset()
+        digitCriteriaView.reset()
+        specialCharacterCriteriaView.reset()
+    }
+}
+
+extension Bool {
+    var intValue: Int {
+        return self ? 1 : 0
     }
 }
 

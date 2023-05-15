@@ -10,18 +10,34 @@ import UIKit
 
 protocol PassrwordTextFieldDelegate: AnyObject {
     func editingChanged(_ sender: PassrwordTextField)
+    func editingDidEnd(_ sender: PassrwordTextField)
 }
 
 class PassrwordTextField: UIView {
     
+    /**
+     A function one passes in to do custom validation on the text field.
+     
+     - Parameter: textValue: The value of text to validate
+     - Returns: A Bool indicating whether text is valid, and if not a String containing an error message
+     */
+
+    typealias CustomValidation = (_ textValue: String?) -> (Bool, String)?
+    
     let lockImageView = UIImageView(image: UIImage(systemName: "lock.fill"))
     let textField = UITextField()
-    let pleceHolderText: String
     let eyeButton = UIButton(type: .custom)
     let dividerView = UIView()
     let errorLabel = UILabel()
     
+    let pleceHolderText: String
+    var customValidation: CustomValidation?
     weak var delegate: PassrwordTextFieldDelegate?
+    
+    var text: String? {
+        get { return textField.text }
+        set { textField.text = newValue }
+    }
     
     init(pleceHolderText: String) {
         self.pleceHolderText = pleceHolderText
@@ -145,7 +161,40 @@ extension PassrwordTextField {
     }
 }
 
+// MARK: - UITextFieldDelegate
 extension PassrwordTextField: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        delegate?.editingDidEnd(self)
+    }
     
+    // Called when 'return' key pressed. Necessary for dimissing keyboard.
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true) // resing first responder
+        return true
+    }
+}
+
+// MARK: - Validation
+extension PassrwordTextField {
+    func validate() -> Bool {
+        if let customValidation = customValidation,
+           let customValidationResult = customValidation(text),
+           customValidationResult.0 ==  false {
+            showError(customValidationResult.1)
+            return false
+        }
+        clearError()
+        return true
+    }
+    
+    private func showError(_ errorMesage: String) {
+        errorLabel.isHidden = false
+        errorLabel.text = errorMesage
+    }
+    
+    private func clearError() {
+        errorLabel.isHidden = true
+        errorLabel.text = ""
+    }
 }
 
