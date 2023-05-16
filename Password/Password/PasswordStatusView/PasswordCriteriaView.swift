@@ -19,9 +19,9 @@ class PasswordCriteriaView: UIView {
     let xmarkImage = UIImage(systemName: "xmark.circle")!.withTintColor(.systemRed, renderingMode: .alwaysOriginal)
     let circleImage = UIImage(systemName: "circle")!.withTintColor(.tertiaryLabel, renderingMode: .alwaysOriginal)
     
-    var isCrereiaMet: Bool = false {
+    var isCriteriaMet: Bool = false {
         didSet {
-            if isCrereiaMet {
+            if isCriteriaMet {
                 imageView.image = checkmarkImage
             } else {
                 imageView.image = xmarkImage
@@ -30,7 +30,7 @@ class PasswordCriteriaView: UIView {
     }
     
     func reset() {
-        isCrereiaMet = false
+        isCriteriaMet = false
         imageView.image = circleImage
     }
     

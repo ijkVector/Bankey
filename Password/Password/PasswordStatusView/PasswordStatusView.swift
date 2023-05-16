@@ -111,18 +111,18 @@ extension PasswordStatusView {
         
         if shouldResetCriteria {
             // Inline validation (✅ or ⚪️)
-            lengthAndNoSpaceMet ? lengthCriteriaView.isCrereiaMet = true : lengthCriteriaView.reset()
-            uppercaseMet ? uppercaseCriteriaView.isCrereiaMet = true : uppercaseCriteriaView.reset()
-            lowercaseMet ? lowercaseCriteriaView.isCrereiaMet = true : lowercaseCriteriaView.reset()
-            digitMet ? digitCriteriaView.isCrereiaMet = true : digitCriteriaView.reset()
-            specialCaracterMet ? specialCharacterCriteriaView.isCrereiaMet = true : specialCharacterCriteriaView.reset()
+            lengthAndNoSpaceMet ? lengthCriteriaView.isCriteriaMet = true : lengthCriteriaView.reset()
+            uppercaseMet ? uppercaseCriteriaView.isCriteriaMet = true : uppercaseCriteriaView.reset()
+            lowercaseMet ? lowercaseCriteriaView.isCriteriaMet = true : lowercaseCriteriaView.reset()
+            digitMet ? digitCriteriaView.isCriteriaMet = true : digitCriteriaView.reset()
+            specialCaracterMet ? specialCharacterCriteriaView.isCriteriaMet = true : specialCharacterCriteriaView.reset()
         } else {
             // Focus lost (❌ or ✅)
-            lengthCriteriaView.isCrereiaMet = lengthAndNoSpaceMet
-            uppercaseCriteriaView.isCrereiaMet = uppercaseMet
-            lowercaseCriteriaView.isCrereiaMet = lowercaseMet
-            digitCriteriaView.isCrereiaMet = digitMet
-            specialCharacterCriteriaView.isCrereiaMet = specialCaracterMet
+            lengthCriteriaView.isCriteriaMet = lengthAndNoSpaceMet
+            uppercaseCriteriaView.isCriteriaMet = uppercaseMet
+            lowercaseCriteriaView.isCriteriaMet = lowercaseMet
+            digitCriteriaView.isCriteriaMet = digitMet
+            specialCharacterCriteriaView.isCriteriaMet = specialCaracterMet
         }
     }
     
@@ -150,6 +150,21 @@ extension PasswordStatusView {
 extension Bool {
     var intValue: Int {
         return self ? 1 : 0
+    }
+}
+
+// MARK: - Tests
+extension PasswordCriteriaView {
+    var isCheckMarkImage: Bool {
+        return imageView.image == checkmarkImage
+    }
+    
+    var isXmarkImage: Bool {
+        return imageView.image == xmarkImage
+    }
+    
+    var isResetImage: Bool {
+        return imageView.image == circleImage
     }
 }
 
